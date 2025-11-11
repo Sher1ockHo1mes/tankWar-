@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>坦克大战 Web</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="menu">
+    <div class="menu-card">
+      <h1>坦克大战</h1>
+      <p>键盘操作：WASD移动，空格/点击射击，P暂停</p>
+      <div class="menu-actions">
+        <label class="select">
+          难度：
+          <select id="difficulty">
+            <option value="easy">简单</option>
+            <option value="normal" selected>普通</option>
+            <option value="hard">困难</option>
+          </select>
+        </label>
+        <label class="range">
+          音量：
+          <input id="volume" type="range" min="0" max="1" step="0.01" value="0.7" />
+        </label>
+        <button id="startBtn">开始游戏</button>
+      </div>
+    </div>
+  </div>
+
+  <canvas id="game"></canvas>
+
+  <div id="hud">
+    <div class="hud-left">
+      <div id="healthBar"><span id="healthFill"></span></div>
+      <div class="stat">生命 <span id="lives">3</span></div>
+    </div>
+    <div class="hud-center">
+      <div class="stat">关卡 <span id="level">1</span></div>
+      <div class="stat">敌人 <span id="enemies">0</span></div>
+    </div>
+    <div class="hud-right">
+      <div class="stat">分数 <span id="score">0</span></div>
+    </div>
+  </div>
+
+  <div id="mobile">
+    <div id="joystick">
+      <div id="stick"></div>
+    </div>
+    <button id="fireBtn">射击</button>
+  </div>
+
+  <script src="main.js"></script>
+  </body>
+</html>
